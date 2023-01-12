@@ -1,0 +1,116 @@
+:root {
+  /* Book container */
+  --book-border: 1px solid #ccc;
+  --book-border-radius: 0.8em;
+  --book-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  --book-padding: 1em;
+  --book-color: rgba(255, 0, 0, 0.63);
+
+  /* title container  */
+  --title-font-size: clamp(1.6rem, 3vw, 2.4rem);
+  --title-font-weight: bold;
+
+  /* author */
+  --author-font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+
+  /* button */
+  --button-padding: 0.5em;
+  --button-hover-background-color: #e60000ad;
+
+
+  }
+
+/* Book container */
+
+.book {
+  display: flex;
+  flex-direction: column;
+  /* other styles */
+  border: var(--book-border);
+  border-radius: var(--book-border-radius);
+  border-right: none;
+  box-shadow: var(--book-box-shadow);
+  margin: var(--book-margin);
+  padding: var(--book-padding);
+  background-color: rgba(105, 159, 165, 0.8);
+  max-width: 300px;
+}
+
+.book {
+  /* other styles */
+  position: relative;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.book:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 0 0 0.5px;
+  border-right: 5px solid var(--book-color);
+  transition: 0.3s ease-in-out;
+}
+
+/* Book title */
+
+.book-title {
+  font-size: var(--title-font-size);
+  font-weight: var(--title-font-weight);
+  padding-bottom: 0.5em;
+  align-self: center;
+}
+
+/* Book read */
+
+.book.read {
+  --book-color: green;
+}
+
+/* Book author */
+
+.book-author {
+  font-size: var(--author-font-size);
+  color: var(--author-color);
+  margin-bottom: var(--author-margin-bottom);
+  padding-bottom: 0.5em;
+}
+
+/* Book Pages */
+
+.book-pages {
+  font-size: var(--pages-font-size);
+  margin-bottom: 0.5em;
+}
+
+/* Book button */
+
+#remove-button {
+  border-radius: var(--button-border-radius);
+  cursor: pointer;
+  border-radius: 1.25em;
+  min-height: 48px;
+}
+
+#remove-button:hover {
+  background-color: var(--button-hover-background-color);
+}
+#book-element-read-container {
+  padding-bottom: 0.5em;
+  text-align: center;
+}
+
+/* check box styling */
+
+#books {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  grid-gap: 1em;
+  place-content: center;
+  margin-top: 2em;
+}
+

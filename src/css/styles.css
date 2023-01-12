@@ -1,0 +1,232 @@
+:root {
+  font-size: 62.5%;
+  /* H1 */
+  --h1-FS: clamp(3.2rem, 6vw, 6.4rem);
+  /* Button */
+  --button-FS: 20px;
+  /* Form */
+  --form-FS: clamp(1.6rem, 3vw, 1.8rem);
+  --legend-FS: clamp(1.6rem, 3vw, 2.4rem);
+
+  /* input */
+  --error-color: #e60000ad;
+
+}
+
+/* bg + general font styling */
+
+body {
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(106, 159, 165, 0.8),
+    rgba(105, 159, 165, 0.7)
+  );
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  font-size: 1.6rem;
+}
+
+/*! reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  /* outline: 1px blue solid; */
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+input,
+textarea,
+button,
+select {
+  font: inherit;
+}
+
+/*! reset */
+
+/* h1 title */
+
+#pageTitle {
+  text-align: center;
+  padding: 1em;
+  font-size: var(--h1-FS);
+}
+
+/* form container */
+#popUp {
+  display: none;
+  justify-content: center;
+  padding: 4rem 0 4rem 0;
+}
+
+/* form */
+#form {
+  width: 70%;
+  border: 2px black solid;
+  background-color: rgba(238, 238, 238, 0.493);
+  padding: 1em;
+  max-width: 600px;
+  position: relative;
+}
+
+#form p {
+  padding: 1em;
+}
+
+/* form close button */
+span.close {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  font-size: 48px;
+  text-align: center;
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  cursor: pointer;
+}
+
+/* new book text */
+#legend {
+  padding-top: 0.8em;
+  display: block;
+  font-size: var(--legend-FS);
+  text-align: center;
+  text-decoration: underline #333;
+}
+
+/*! button */
+#newBookBtn-container {
+  display: block;
+  text-align: center;
+  min-height: 48px;
+}
+
+#newBookBtn {
+  font-size: var(--button-FS);
+  padding: 1em;
+  border-radius: 0.8em;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* form inputs */
+#textInput input {
+  width: 100%;
+  font-size: var(--form-FS);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  /* This centers the pages input */
+  margin: 0 auto;
+}
+
+/* read */
+.read {
+  background-color: rgb(48, 209, 48);
+}
+
+p:has(label) {
+  background-color: rgba(255, 0, 0, 0.61);
+  transition: 0.5s ease-in-out;
+}
+
+#checkBox {
+  margin: 0px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+#addBtn {
+  font-size: var(--form-FS);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0.5em;
+  display: block;
+}
+
+#form label {
+  font-size: var(--form-FS);
+}
+
+#form div:has(button) {
+  display: flex;
+  justify-content: center;
+}
+
+#textInput p:nth-of-type(1) {
+  /* style the first p element here */
+  padding-top: 2em;
+}
+#checkBox p {
+  margin-top: 0.25em;
+  margin-bottom: 0.75em;
+  border-radius: 0.2em;
+}
+
+input[type="checkbox"] {
+  width: 28px;
+  height: 28px;
+  border-radius: 5%;
+  margin: 0 auto;
+  display: flex;
+}
+
+input[type="text"] {
+  padding:0.55em ;
+}
+
+#form p input[type="number"] {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
+#form input[type="number"] {
+  padding:0.55em ;
+  width: 50%;
+  text-align: center;
+  max-width: 80px;
+}
+
+label {
+  width: 48px;
+  height: 48px;
+  text-align: center;
+}
+
+label::before{
+  content: "Read";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  padding: 0.55em 0 0.55em 0;
+
+}
+#form #title-error{
+  padding: 0;
+  margin: 0;
+  margin: 0 1em 0 1em;
+  background-color: var(--error-color);
+
+}
+#form #author-error{
+  padding: 0;
+  margin: 0;
+  margin: 0 1em 0 1em;
+  background-color: var(--error-color);
+
+}
