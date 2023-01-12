@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <h1 id ="pageTitle">Library Project</h1>
+    <div id="newBookBtn-container">
+        <button id="newBookBtn">+ New Book</button>
+    </div>
+    <section>
+        <div id="popUp">
+            <form id='form' novalidate>
+                <span class="close">&times;</span>
+                <span id="legend">Book Details</span>
+                <div id='textInput'> 
+                    <p><input type='text' id='title' required name='title' placeholder='Title' minlength="3" pattern="^[a-zA-Z\s]+$"></p>
+                    <p id="title-error"></p>
+                    <p><input type='text' id='author' name='author' placeholder='Author' pattern="^[a-zA-Z\s]+$"></p>
+                    <p id="author-error"></p>
+                    <p><input type='number' id='pages' name='pages' placeholder='Pages'></p>
+                </div>
+                <div id='checkBox'>
+                    <p>
+                        <label>
+                            <input type='checkbox' id='read' name='read' value='yes' >
+                        </label>
+                    </p>
+                </div>
+                <div>
+                    <button type='submit' form='form' id='addBtn'>Add Book</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section id="books">
+    
+    </section>
+
+</body>
+</html>
